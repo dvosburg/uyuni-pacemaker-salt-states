@@ -1,3 +1,4 @@
+# Move resources from aslan cluster node to azaroth
 # helen-vm
 {% set output = salt['cmd.run']('crm resource locate helen-vm') %}
  {% if 'aslan' in output %}
