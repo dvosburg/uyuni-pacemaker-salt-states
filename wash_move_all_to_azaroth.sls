@@ -68,17 +68,17 @@ show_wardrobe-vm_location:
      - name: crm resource locate wardrobe-vm
 {% endif %}
 
-# admin-ip
-{% set output = salt['cmd.run']('crm resource locate admin-ip') %}
+# admin_ip
+{% set output = salt['cmd.run']('crm resource locate admin_ip') %}
  {% if 'aslan' in output %}
-move_admin-ip_azaroth:
+move_admin_ip_azaroth:
   cmd.run:
-    - name: crm resource move admin-ip azaroth
+    - name: crm resource move admin_ip azaroth
 
 {% else %}
-show_admin-ip_location:
+show_admin_ip_location:
    cmd.run:
-     - name: crm resource locate admin-ip
+     - name: crm resource locate admin_ip
 {% endif %}
 
 # duffle-vm
